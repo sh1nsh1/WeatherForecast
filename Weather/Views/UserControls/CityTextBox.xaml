@@ -1,0 +1,23 @@
+﻿<UserControl x:Class="Weather.Views.UserControls.CityTextBox"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Weather.Views.UserControls"
+             
+             mc:Ignorable="d" 
+             d:DesignHeight="40" d:DesignWidth="290">
+    <Grid Background="white">
+        <TextBox x:Name="CityTB" Background="Transparent"
+                 VerticalContentAlignment="Center"
+                 FontSize="20" Padding="5"
+                 TextChanged="CityTB_TextChanged"/>
+        <TextBlock x:Name="CityPlaceHolder"  Text="Enter the city" 
+                   VerticalAlignment="Center" Panel.ZIndex="-1"
+                   FontSize="20" Padding="7" />
+        
+        <Button Content="Forecast" Height="40" HorizontalAlignment="Right" 
+                Padding="10 0 10 0" FontSize="16" BorderThickness="2"
+                Click="ForecastBtn_Click"/>
+    </Grid>
+</UserControl>
