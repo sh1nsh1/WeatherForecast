@@ -48,7 +48,7 @@ namespace Weather.Views.UserControls
                 //отображение на главном окне
                 main.Temperature.Text = $"Temperature: {(int)(wm.main.temp - 273.15)}°C";
                 main.Description.Text = $"Description: {wm.weather[0].description}";
-                main.WindSpeed.Text = $"Wind speed: {wm.wind.speed}m/s²";
+                main.WindSpeed.Text = $"Wind speed: {wm.wind.speed}m/s";
             }
             catch
             {
