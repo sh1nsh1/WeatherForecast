@@ -46,10 +46,11 @@ namespace Weather
         public static string GetCoordinates(string City) {
             HtmlWeb web = new HtmlWeb();
             //загружается сайт для парсинга широты и долготы
-            HtmlDocument doc = web.Load($"https://latitudelongitude.org/ru/{City.ToLower()}/");
+            HtmlDocument doc = web.Load($"https://latitudelongitude.org/ru/{City.ToLower()}" +"/");
             //по узлам находится искомый текст
-            var coords = doc.DocumentNode.SelectNodes("//*[@id=\"content\"]/section[1]/p/span").First().InnerText;
-            //методв возвращает координты в виде строки
+            var coords = doc.DocumentNode.SelectNodes("//section[1]/p/span").First().InnerText;
+            //метод возвращает координты в виде строки
+
             return coords;
         }
     }
